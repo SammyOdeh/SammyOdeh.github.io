@@ -1,0 +1,117 @@
+/* ===========================
+   Mobile-Only Styles
+   =========================== */
+
+/* Reset base layout */
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Nav bar */
+.topBar {
+    padding: 12px;
+    justify-content: center;
+}
+
+.topBarLinks {
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;   /* let links wrap if too long */
+    gap: 4px;
+}
+
+.topBarLinks a {
+    padding: 6px 4px;
+}
+
+.topBarLinks li:not(:last-child)::after {
+    margin: 0 4px;
+}
+
+/* Intro section */
+.intro {
+    font-size: 60px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.intro span {
+    font-size: 70px !important;
+    display: block;
+    text-underline: white;
+    text-underline-style: dash;
+}
+
+/* Section titles */
+.sectionTitle {
+    font-size: 70px;
+    margin: 16px 0;
+    text-align: center;
+}
+
+/* About section text */
+.about {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 12px auto;
+}
+
+/* Photo */
+.selfie {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 12px auto;
+    border-radius: 12px;
+}
+
+/* Experience / Project cards */
+.experienceCard {
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+    padding: 16px;
+    margin: 16px auto;
+    background: rgba(255,255,255,0.05);
+    text-align: left;
+    max-width: 95%;
+}
+
+.experienceHeader h2 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.experienceHeader .date {
+    font-size: 0.85rem;
+}
+
+.experienceCard h3 {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.experienceCard li {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+/* General sections */
+section {
+    padding: 0 12px;
+    margin: 0 auto;
+    max-width: 100%;
+}
