@@ -21,7 +21,7 @@
 
     .topBorder {
       position: sticky;
-      
+
       top: 0px;
 
       z-index: 1000;
@@ -55,8 +55,8 @@
       padding: 12px;
     }
 
-    .topBarLinks a:hover { 
-        color: #fff; 
+    .topBarLinks a:hover {
+        color: #fff;
     }
 
     .topBarLinks li:not(:last-child)::after { /* inbetween children add | */
@@ -69,12 +69,12 @@
 
     }
 
-    html { 
-        scroll-behavior: smooth; 
+    html {
+        scroll-behavior: smooth;
     } /* for scrolling */
 
-    section { 
-        scroll-margin-top: 20px; 
+    section {
+        scroll-margin-top: 20px;
     }/* for scrolling */
 
     .intro {
@@ -100,56 +100,97 @@
       min-height: 40vh;
     }
 
-    .photo { 
-        display: flex; 
-        flex-direction: column; 
+    .photo {
+        display: flex;
+        flex-direction: column;
 
-        align-items: center; 
+        align-items: center;
     }
 
-    .photoLabel { 
-        font-size: 40px; 
+    .selfie {
+        max-width: 400px;
 
-        margin: 0 0 15px 0; 
-
-    }
-
-    .selfie { 
-        max-width: 400px; 
-
-        width: 100%; 
-
-        border-radius: 12px; 
+        width: 100%;
+        flex-wrap: wrap;
+        border-radius: 12px;
     }
 
     .about {
-      padding: 100px 20px;
-
       text-align: center;
-
       max-width: var(--section-max);
       margin: 0 auto;
     }
 
+    .experienceCard {
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 40px;
+      background: rgba(255,255,255,0.05);
+      text-align: left;
+    }
+
+    .experienceHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .experienceHeader h2 {
+      font-size: 1.6rem;
+      flex: 1;
+      min-width: 0;
+      margin: 0;
+    }
+
+    .experienceHeader .date {
+      font-size: 1rem;
+      color: #aaa;
+      font-style: italic;
+    }
+
+    .experienceCard h3 {
+      margin-top: 8px;
+      font-size: 1.2rem;
+      color: #ccc;
+    }
+
+    .experienceCard ul {
+      margin-top: 15px;
+      padding-left: 20px;
+    }
+
+    .experienceCard li {
+      margin-bottom: 12px;
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+
+    .section-title {
+      font-size: 90px;
+    }
+
   </style>
 </head>
+
 <body>
 
-  <header class="topBorder">
-    <nav class="topBar">
-      <ul class="topBarLinks">
-        <li><a href="#intro">Sammy</a></li>
-        <li><a href="#photos">Photos</a></li>
+<header class="topBorder">
+  <nav class="topBar">
+    <ul class="topBarLinks">
+      <li><a href="#intro">Sammy</a></li>
+      <li><a href="#photos">Photos</a></li>
 
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
 
-        <li><a href="#otherWebsites">Other</a></li>
-        <li><a href="#sources">Sources</a></li>
-
-      </ul>
-    </nav>
-  </header>
+      <li><a href="#links">Links</a></li>
+    </ul>
+  </nav>
+</header>
 
   <section id="intro" class="intro">
     <p>
@@ -158,61 +199,126 @@
     </p>
   </section>
 
-  <section id="photos" class="photoSection">
-    <div class="photo">
-      <p class="photoLabel"><strong>Me:</strong></p>
-      <img
-        src="F22AA556-5332-4EF9-A358-998A8405873A_1_105_c.jpeg"
-        alt="Sammy"
-        class="selfie"
-        loading="lazy"
-      />
-    </div>
-  </section>
 
   <section id="about" class="about">
-    <h1 style="font-size: 90px;">About Me</h1>
-    <h3 style="font-size: 30px;">
-      I am a third year Computer Science student at UB<br/>
-      I'm currently taking GEO 120 which is why I'm making this cute website.<br>
-      I <3 🌎
-    </h3>
+
+    <h1 class="section-title">About Me</h1>
+    <div class="photo">
+      <img
+              src="F22AA556-5332-4EF9-A358-998A8405873A_1_105_c.jpeg"
+              alt="Sammy"
+              class="selfie"
+              loading="lazy"
+      />
+    </div>
+    <p style="font-size: 20px; line-height: 1.6; max-width: 700px; margin: 20px auto; text-align: center;">
+      I began coding in 2021 after experimenting with the <strong>ProjectKorra</strong> Minecraft plugin,
+      creating addons that sparked my passion for programming.
+      Today, I’m a third-year <strong>Computer Science student at the University at Buffalo</strong>,
+      where I’ve built projects in <strong>web development, research, and game server plugins</strong>.
+      College has pushed me to grow not only as a developer but also as a <strong>teaching assistant, researcher,
+      and collaborator</strong>, and I’m excited to keep building creative, impactful technology.
+    </p>
+
+
   </section>
 
+<section id="experience" class="about">
+  <h1 class="section-title">Experience</h1>
+
+  <div class="experienceCard">
+    <div class="experienceHeader">
+      <h2>Undergraduate Research Assistant</h2>
+      <span class="date">May 2024 – Present</span>
+    </div>
+    <h3>📍 Computation and Equity Lab – University at Buffalo</h3>
+    <ul>
+      <li>Developed a scalable data processing pipeline in Python to automate training and evaluation of 3 NLP models on over 2 million Reddit comments.</li>
+      <li>Engineered an end-to-end system that integrated Hugging Face Transformers for fine-tuning, achieving a 95% average F1 score.</li>
+      <li>Implemented a data quality module using the CleanLab library to detect and correct label errors, improving dataset robustness.</li>
+      <li>Built reproducible Jupyter workflows for data ingestion, cleaning, and large-scale analysis.</li>
+    </ul>
+  </div>
+
+  <div class="experienceCard">
+    <div class="experienceHeader">
+      <h2>Software Engineer Team Lead</h2>
+      <span class="date">Aug 2021 – Present</span>
+    </div>
+    <h3>📍 Remote</h3>
+    <ul>
+      <li>Increased user retention by 40% for a large-scale Minecraft network of over 600,000 unique players by
+        implementing UX improvements, resolving critical bugs, and acting on user feedback.</li>
+      <li>Optimized server performance by using profilers to diagnose and fix bottlenecks related to CPU, memory usage,
+        and user latency.</li>
+      <li>Develop and maintain over 20 full-stack projects and repositories across the network’s services.</li>
+      <li>Lead a team of 9 developers, establishing best practices through code reviews, coordinating sprints, and conducting
+        technical interviews.</li>
+    </ul>
+  </div>
+
+  <div class="experienceCard">
+    <div class="experienceHeader">
+      <h2>Teaching Assistant – Internet, Computing, and Society (CSE 199) </h2>
+      <span class="date">Aug 2021 – Present</span>
+    </div>
+    <h3>📍 Buffalo</h3>
+    <ul>
+      <li>Deliver weekly interactive activities to 40+ students by creating presentations and exercises that reinforce lecture
+        topics</li>
+      <li>Provide timely, detailed feedback on homework, recitation activities, and quizzes to support student learning.</li>
+      <li>        Coordinate with professors and TAs to ensure instruction consistency and resolve student questions efficiently.</li>
+
+    </ul>
+  </div>
+</section>
+
   <section id="projects" class="about">
-    <h1 style="font-size: 90px;">Projects</h1>
-    <h3 style="font-size: 30px;">
-        Project 1: <a href="index.html">My Webpage</a><br>
-        Project 2: <a href="project2.html">Google Earth orthorectification</a><br>
-        Project 3: <a href="project3.html">Buffalo Redlining</a><br>
+    <h1 class="section-title">Projects</h1>
+    <div class="experienceCard">
+      <div class="experienceHeader">
+        <h2>MegaTags</h2>
+        <span class="date">May 2025</span>
+      </div>
+      <ul>
+        <li>Developed a Java add-on for a public Minecraft server using the Spigot API, enabling player profile
+          customizations that increased server retention by 25% and boosted monetization through premium features.</li>
+        <li>Designed a user-friendly interface following extensive UX experiments and testing to maximize engagement.</li>
+        <li>Implemented efficient data storage via a MySQL database to manage player customizations, reducing retrieval
+          time and improving scalability.</li>
+      </ul>
+    </div>
+
+    <div class="experienceCard">
+      <div class="experienceHeader">
+        <h2>Cloner Bot</h2>
+        <span class="date">May 2023</span>
+      </div>
+      <ul>
+        <li>Created a Discord chatbot using the JDA and OpenAI APIs that talks users in the voice of any public figure,
+          boosting engagement in servers by 20%</li>
+        <li>Built a SQLite database to store user data and make it persistent across bot restarts.</li>
+      </ul>
+    </div>
+
+    <div class="experienceCard">
+      <div class="experienceHeader">
+        <h2>Cloner Bot</h2>
+        <span class="date">May 2023</span>
+      </div>
+      <ul>
+        <li>Created a Discord chatbot using the JDA and OpenAI APIs that talks users in the voice of any public figure,
+          boosting engagement in servers by 20%</li>
+        <li>Built a SQLite database to store user data and make it persistent across bot restarts.</li>
+      </ul>
     </div>
   </section>
 
-  <section id="otherWebsites" class="about">
-    <h1 style="font-size: 50px;">My Colleagues</h1>
-    <h3>
-      <br>
-      <a href="http://www.acsu.buffalo.edu/~negaripp" target="_blank">Nicole Garippo</a>
-      <br>
-      <a href="http://www.acsu.buffalo.edu/~chn3" target="_blank">Calvin Nguyen</a>
-      <br>
-      <a href="http://www.acsu.buffalo.edu/~bibuntin" target="_blank">Brianne Bunting</a>
-    </h3>
+
+  <section id="links" class="about">
+
   </section>
 
-
-  <section id="sources" class="about">
-  <h1 style="font-size: 50px;">Sources</h1>
-    <h3 style="font-size: 30px;">
-    <a href="https://www.w3schools.com/CSSref/index.php"; target="_blank";>CSS</a>
-  </h3>
-    </h3>
-    <h3 style="font-size: 30px;">
-    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"; target="_blank";>HTML</a>
-          <br><br><br><br><br><br><br><br><br><br><br>
-
-  </h3>
-</section>
 
 </body>
 </html>
