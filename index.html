@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sammy Odeh</title>
+  <meta charset="UTF-8" />
+  <meta name="date" content="Sept. 8, 2025" />
+  <style>
+
+
+    :root{
+      --section-max: 900px;
+    }
+
+    body {
+
+      font-family: Arial, sans-serif;
+      color: white;
+
+      background: black;
+    }
+
+    .topBorder {
+      position: sticky;
+      
+      top: 0px;
+
+      z-index: 1000;
+
+      background: #000;
+
+      border-bottom: 5px solid rgba(255,255,255,0.1);
+    }
+
+    .topBar {
+      display: flex;
+      align-items: center;
+
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .topBarLinks {
+      list-style: none;
+      display: flex;
+
+      margin: 0;
+      padding: 0;
+
+      font-size: 16px;
+    }
+
+    .topBarLinks a {
+      color: #ddd;
+      text-decoration: none;
+      padding: 12px;
+    }
+
+    .topBarLinks a:hover { 
+        color: #fff; 
+    }
+
+    .topBarLinks li:not(:last-child)::after { /* inbetween children add | */
+      content: "|";
+
+      color: #656;
+
+      margin-left: 10px;
+      margin-right: 10px;
+
+    }
+
+    html { 
+        scroll-behavior: smooth; 
+    } /* for scrolling */
+
+    section { 
+        scroll-margin-top: 20px; 
+    }/* for scrolling */
+
+    .intro {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+      font-size: 90px;
+    }
+
+    .photoSection {
+      display: flex;
+      justify-content: center;
+
+      align-items: center;
+      gap: 10px;
+
+      padding: 60px 20px;
+      min-height: 40vh;
+    }
+
+    .photo { 
+        display: flex; 
+        flex-direction: column; 
+
+        align-items: center; 
+    }
+
+    .photoLabel { 
+        font-size: 40px; 
+
+        margin: 0 0 15px 0; 
+
+    }
+
+    .selfie { 
+        max-width: 400px; 
+
+        width: 100%; 
+
+        border-radius: 12px; 
+    }
+
+    .about {
+      padding: 100px 20px;
+
+      text-align: center;
+
+      max-width: var(--section-max);
+      margin: 0 auto;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header class="topBorder">
+    <nav class="topBar">
+      <ul class="topBarLinks">
+        <li><a href="#intro">Sammy</a></li>
+        <li><a href="#photos">Photos</a></li>
+
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+
+        <li><a href="#otherWebsites">Other</a></li>
+        <li><a href="#sources">Sources</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section id="intro" class="intro">
+    <p>
+      Hi, my name is <br />
+      <span style = "font-size: 200px;"><strong>Sammy Odeh</strong></span><br />
+    </p>
+  </section>
+
+  <section id="photos" class="photoSection">
+    <div class="photo">
+      <p class="photoLabel"><strong>Me:</strong></p>
+      <img
+        src="F22AA556-5332-4EF9-A358-998A8405873A_1_105_c.jpeg"
+        alt="Sammy"
+        class="selfie"
+        loading="lazy"
+      />
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h1 style="font-size: 90px;">About Me</h1>
+    <h3 style="font-size: 30px;">
+      I am a third year Computer Science student at UB<br/>
+      I'm currently taking GEO 120 which is why I'm making this cute website.<br>
+      I <3 🌎
+    </h3>
+  </section>
+
+  <section id="projects" class="about">
+    <h1 style="font-size: 90px;">Projects</h1>
+    <h3 style="font-size: 30px;">
+        Project 1: <a href="index.html">My Webpage</a><br>
+        Project 2: <a href="project2.html">Google Earth orthorectification</a><br>
+        Project 3: <a href="project3.html">Buffalo Redlining</a><br>
+    </div>
+  </section>
+
+  <section id="otherWebsites" class="about">
+    <h1 style="font-size: 50px;">My Colleagues</h1>
+    <h3>
+      <br>
+      <a href="http://www.acsu.buffalo.edu/~negaripp" target="_blank">Nicole Garippo</a>
+      <br>
+      <a href="http://www.acsu.buffalo.edu/~chn3" target="_blank">Calvin Nguyen</a>
+      <br>
+      <a href="http://www.acsu.buffalo.edu/~bibuntin" target="_blank">Brianne Bunting</a>
+    </h3>
+  </section>
+
+
+  <section id="sources" class="about">
+  <h1 style="font-size: 50px;">Sources</h1>
+    <h3 style="font-size: 30px;">
+    <a href="https://www.w3schools.com/CSSref/index.php"; target="_blank";>CSS</a>
+  </h3>
+    </h3>
+    <h3 style="font-size: 30px;">
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"; target="_blank";>HTML</a>
+          <br><br><br><br><br><br><br><br><br><br><br>
+
+  </h3>
+</section>
+
+</body>
+</html>
